@@ -1,0 +1,48 @@
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ " 
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+#PS1="\u@\h:\w$"
+
+export PATH=/usr/local/bin:~/.composer/vendor/bin:$PATH
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Alias MacVim to open in Terminal
+alias vim="mvim -v"
+
+# Git Aliases
+
+alias gs="git status"
+alias ga="git add -A"
+alias gca="git commit -a"
+alias gcm="git commit -m"
+alias gcv="git commit -v"
+alias gl="git log"
+alias glo="git log --oneline"
+alias greset="git reset --hard HEAD"
+alias gpush="git push"
+alias gpull="git pull"
+alias gb="git branch"
+alias gco="git checkout"
+alias gd="git diff"
+
+# Navigation Aliases
+
+alias be="bundle exec"
+alias ls='ls -GFh'
+alias ll="ls -lah"
+alias lsg="ls | grep"
+alias phpd="docker-compose exec app php"
+alias mvim="/Applications/MacVim.app/Contents/bin/mvim"
+
+# Ignore duplicate history entries
+
+HISTCONTROL=ignoredups:erasedups
+
+# Bash History Length
+
+HISTFILESIZE=3000
