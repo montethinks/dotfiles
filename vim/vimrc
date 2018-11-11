@@ -198,10 +198,13 @@ set hlsearch      " highlight all matched terms
 " situations, like MS Word can, but I *always* want tab to behave the same way
 " -- so I set all three of these tab-related values the same.
 " (To overrride these per file type, put commands in .vim/ftplugin/)
-set tabstop=2
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+" set tabstop=2
 set softtabstop=2
-set shiftwidth=2
-set expandtab " insert spaces instead of tab characters
+" set shiftwidth=2
+" set expandtab " insert spaces instead of tab characters
 set smarttab  " backspace over a tab will remove a tab's worth of space
 
 " *********** DISPLAYING HIDDEN CHARACTERS *********
